@@ -30,7 +30,7 @@ exports.up = function(knex) {
                 .notNullable();
             table.string("contactInfo")
                 .notNullable();
-            table.decimal("price")
+            table.string("price")
                 .notNullable();
             table.string("imageLink");
         });
