@@ -24,16 +24,18 @@ PUT request to this end point updates the item with with the provided id and ret
 https://african-market-place-bw.herokuapp.com/api/items/:id
 DELETE request to this end point deletes the item with the provided it and returns {message: "The item has been removed!"}.
 
-| User Schema	                                            |
-|:----------------------------------------------------------|
+User Schema
+| Property  | Type 	| Required or not                   |
+|:----------|:----------|:----------------------------------|
 | id        |	Integer | assigned upon successful register |
 | username  |	String  | required, unique                  |
 | password  |	String  | required                          |
 | email	    |   String  | required, unique                  |
 | imageLink |	String  | not required                      |
-	
-| Item Schema	                                            |
-|:----------------------------------------------------------|
+
+Item Schema
+| Property      | Type 	  | Required or not                 |
+|:--------------|:--------|:--------------------------------|
 | id	        | Integer | assigned upon successful insert |
 | user_id       | Integer | required                        |
 | name          | String  | required                        |
