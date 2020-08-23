@@ -32,8 +32,6 @@ router.get('/:id', (req, res) => {
       });
 });
 
-router.get
-
 router.post("/", (req, res) => {
   if (req.body.user_id && req.body.name && req.body.location && req.body.description && req.body.contactInfo && req.body.price){
     Items.insert(req.body)

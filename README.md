@@ -7,7 +7,7 @@ https://african-market-place-bw.herokuapp.com/api/auth/register
 POST request to this end point adds a new user to the database and returns the newly created user info.
 
 https://african-market-place-bw.herokuapp.com/api/auth/login
-POST request to this end point returns a token and the user info if the username and password are correct.
+POST request to this end point returns a token (expires in 24 hours) and the user info if the username and password are correct.
 
 https://african-market-place-bw.herokuapp.com/api/items 
 GET request to this end point returns the list of all items in the database if the token in the `Headers.authorization` is valid.
