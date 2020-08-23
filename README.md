@@ -29,17 +29,17 @@ User Schema
 
 | Property  | Type 	    | Required or not                   |
 |:----------|:----------|:----------------------------------|
-| id        |	Integer | assigned upon successful register |
-| username  |	String  | required, unique                  |
-| password  |	String  | required                          |
+| id        |	Integer   | assigned upon successful register |
+| username  |	String    | required, unique                  |
+| password  |	String    | required                          |
 | email	    |   String  | required, unique                  |
-| imageLink |	String  | not required                      |
+| imageLink |	String    | not required                      |
 
 Item Schema
 
 | Property      | Type 	  | Required or not                 |
 |:--------------|:--------|:--------------------------------|
-| id	        | Integer | assigned upon successful insert |
+| id	          | Integer | assigned upon successful insert |
 | user_id       | Integer | required                        |
 | name          | String  | required                        |
 | description   | String  | required                        |
@@ -47,3 +47,4 @@ Item Schema
 | contactInfo   | String  | required                        |
 | price         | String  | required                        |
 | imageLink     | String  | not required                    |  
+
