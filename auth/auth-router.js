@@ -27,7 +27,7 @@ router.post("/register", (req, res) => {
             message:
                 "please provide username and password and the password should be alphanumeric",
         });
-    }
+    };
 });
 
 router.post("/login", (req, res) => {
@@ -40,15 +40,17 @@ router.post("/login", (req, res) => {
                     const token = signToken(user);
 
                     res.status(200).json({
-                        message: "Welcome to our API",
-                        username: user.username,
-                        id: user.id,
-                        email: user.email,
+                        message: `Welcome ${user.username}`,
+                        userInfo: {
+                            username: user.username,
+                            id: user.id,
+                            email: user.email
+                        },
                         token,
                     });
                 } else {
                     res.status(401).json({ message: "Wrong username or password" });
-                }
+                };
             })
             .catch(error => {
                 res.status(500).json({ message: error.message });
@@ -58,13 +60,14 @@ router.post("/login", (req, res) => {
             message:
                 "please provide username and password and the password shoud be alphanumeric",
         });
-    }
+    };
 });
 
 function signToken(user) {
     const payload = {
         id: user.id,
-        username: user.username
+        username: user.username,
+        email: user.email
     };
 
     const secret = constants.jwtSecret;
@@ -74,6 +77,6 @@ function signToken(user) {
     };
 
     return jwt.sign(payload, secret, options);
-}
+};
 
 module.exports = router;
