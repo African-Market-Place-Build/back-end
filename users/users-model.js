@@ -1,8 +1,10 @@
 const db = require("../database/dbConfig.js");
+const mappers = require('../database/helpers/mappers');
 
 module.exports = {
     add,
-    findBy
+    findBy,
+    getUserItems
 };
 
 function findBy(filter) {
@@ -21,4 +23,10 @@ async function add(user) {
     } catch (error) {
         throw error;
     };
+};
+
+function getUserItems(userId){
+    return db("items")
+      .where("user_id", userId)
+      .then(actions => actions.map(action => mappers.actionToBody(action)));
 };
