@@ -43,6 +43,7 @@ router.post("/login", (req, res) => {
                         message: "Welcome to our API",
                         username: user.username,
                         id: user.id,
+                        email: user.email,
                         token,
                     });
                 } else {
