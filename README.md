@@ -1,6 +1,6 @@
 End Points:
 
-https://african-market-place-bw.herokuapp.com/ 
+https://african-market-place-bw.herokuapp.com/
 GET request to this end point will return {api: "up"}.
 
 https://african-market-place-bw.herokuapp.com/api/auth/register
@@ -9,7 +9,7 @@ POST request to this end point adds a new user to the database and returns the n
 https://african-market-place-bw.herokuapp.com/api/auth/login
 POST request to this end point returns a token and the user info if the username and password are correct.
 
-https://african-market-place-bw.herokuapp.com/api/items
+https://african-market-place-bw.herokuapp.com/api/items 
 GET request to this end point returns the list of all items in the database if the token in the Headers.authorization is valid.
 
 https://african-market-place-bw.herokuapp.com/api/items/:id
@@ -27,23 +27,21 @@ DELETE request to this end point deletes the item with the provided it and retur
 User Schema	
 
 | id        |	Integer | assigned upon successful register |
-| :---------| :-------| :---------------------------------|
 | username  |	String  | required, unique                  |
 | password  |	String  | required                          |
-| email	    | String  | required, unique                  |
+| email	    |   String  | required, unique                  |
 | imageLink |	String  | not required                      |
 	
 Item Schema	
 
 | id	        | Integer | assigned upon successful insert |
-| :-----------| :-------| :-------------------------------|
-| user_id     |	Integer | required                        |
-| name        |	String  | required                        |
-| description |	String  | required                        |
-| location    |	String  | required                        |
-| contactInfo |	String  | required                        |
-| price       |	String  | required                        |
-| imageLink   |	String  | not required                    |  
+| user_id       | Integer | required                        |
+| name          | String  | required                        |
+| description   | String  | required                        |
+| location      | String  | required                        |
+| contactInfo   | String  | required                        |
+| price         | String  | required                        |
+| imageLink     | String  | not required                    |  
 
 
 
