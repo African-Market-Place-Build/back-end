@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const authenticate = require('../auth/authenticate-middleware.js');
 const authRouter = require('../auth/auth-router.js');
 const itemsRouter = require('../items/items-router.js');
+const usersRouter = require("../users/users_router.js");
 
 const server = express();
 
@@ -14,6 +15,7 @@ server.use(express.json());
 
 server.use('/api/auth', authRouter);
 server.use('/api/items', authenticate, itemsRouter);
+server.use('/api/users', authenticate, usersRouter);
 
 server.get("/", (req, res) => {
     res.status(200).json({api: "up"});
