@@ -2,9 +2,14 @@ const db = require("../database/dbConfig.js");
 const mappers = require('../database/helpers/mappers');
 
 module.exports = {
+    find,
     add,
     findBy,
     getUserItems
+};
+
+function find(){
+    return db("users");
 };
 
 function findBy(filter) {
