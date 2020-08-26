@@ -78,11 +78,3 @@ Item example
     "imageLink": "https://img.letgo.com/images/02/d3/96/a5/02d396a58d92d9fa22ebb1a5ceaaa046.png?impolicy=img_600"
 }
 
-
-mysql://
-b641e0ddbcc0ab
-:
-f02a1bb1
-@
-us-cdbr-east-02.cleardb.com
-/heroku_4460df03158e1ce?reconnect=true
