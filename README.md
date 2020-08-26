@@ -79,4 +79,10 @@ Item example
 }
 
 
-
+mysql://
+b641e0ddbcc0ab
+:
+f02a1bb1
+@
+us-cdbr-east-02.cleardb.com
+/heroku_4460df03158e1ce?reconnect=true
