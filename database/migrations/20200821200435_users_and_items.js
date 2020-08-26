@@ -24,6 +24,8 @@ exports.up = function(knex) {
                 .onUpdate("CASCADE");
             table.string("name")
                 .notNullable();
+            table.string("category")
+                .notNullable();
             table.string("description")
                 .notNullable();
             table.string("location")
