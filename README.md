@@ -57,11 +57,13 @@ Item Schema
 | id	        | Integer | assigned upon successful insert             |
 | user_id       | Integer | assigned upon successful insert the url     |
 | name          | String  | required                                    |
+| category      | String  | required                                    |
 | description   | String  | required                                    |
 | location      | String  | required                                    |
 | contactInfo   | String  | required                                    |
 | price         | String  | required                                    |
 | imageLink     | String  | not required                                |  
+
 
 
 Item example

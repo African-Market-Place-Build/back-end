@@ -64,7 +64,7 @@ router.get('/:userId/items/:itemId', (req, res) => {
 });
 
 router.post("/:userId/items", (req, res) => {
-  if (req.body.name && req.body.location && req.body.description && req.body.contactInfo && req.body.price){
+  if (req.body.name && req.body.category && req.body.location && req.body.description && req.body.contactInfo && req.body.price){
     Items.insert(req.params.userId, req.body)
     .then(item => {
       res.status(201).json(item);
@@ -101,7 +101,7 @@ router.put('/:userId/items/:itemId', async (req, res) => {
   const found = await Items.getById(req.params.userId, req.params.itemId);
 
   if(found){
-    if (req.body.name && req.body.location && req.body.description && req.body.contactInfo && req.body.price){
+    if (req.body.name && req.body.category && req.body.location && req.body.description && req.body.contactInfo && req.body.price){
       Items.update(req.params.userId, req.params.itemId, req.body)
         .then(item => {
           res.status(200).json(item);
