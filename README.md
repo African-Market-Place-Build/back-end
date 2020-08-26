@@ -70,9 +70,13 @@ Item example
 
 {
     "name": "iPad Pro 3rd Gen Wifi",
+    "category": "tablets"
     "description": "used",
     "location": "Douala, Cameroon",
     "contactInfo": "hayden@gmail.com",
     "price": "$499.99",
     "imageLink": "https://img.letgo.com/images/02/d3/96/a5/02d396a58d92d9fa22ebb1a5ceaaa046.png?impolicy=img_600"
 }
+
+
+
