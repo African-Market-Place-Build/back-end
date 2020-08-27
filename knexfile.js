@@ -15,17 +15,14 @@ module.exports = {
     }
   },
   production: {
-    client: "pg",
-    connection: process.env.DATABASE_URL
+    client: 'pg',
+    connection: process.env.DATABASE_URL,
+    migrations: {
+      directory: './database/migrations',
+    },
     pool: {
-      mix: 2,
+      min: 2,
       max: 10
     },
-    migrations: {
-      directory: "./database/migrations"
-    },
-    seeds: {
-      directory: "./database/seeds"
-    }
   }
-};
+}
