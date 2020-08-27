@@ -1,8 +1,7 @@
 exports.up = function(knex) {
     return knex.schema
         .createTable('users', table => {
-            table.primary("id")
-                .increments()
+            table.increments("id")
                 .unique();
             table.string('username', 255)
                 .notNullable()
@@ -15,12 +14,12 @@ exports.up = function(knex) {
             table.string("imageLink")
         })
         .createTable("items", table => {
-            table.primary("id")
-                .increments()
+            table.increments("id")
                 .unique();
-            table.foreign('user_id')
-                .unsigned()
+            table.integer('user_id')
                 .notNullable()
+                .unsigned()
+                .index()
                 .references("id")
                 .inTable("users")
                 .onDelete("CASCADE")
