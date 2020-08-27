@@ -14,7 +14,7 @@ function getAllItems() {
 };
 
 function getById(userId, itemId) {
-  return db("items").where({id: itemId, user_id: userId});
+  return db("items").where({id: itemId, user_id: userId}).first();
 };
 
 function getUserItems(userId){
@@ -23,9 +23,7 @@ function getUserItems(userId){
 
 function insert(userId, item) {
   return db('items').insert({...item, user_id: userId})
-  .then(ids => {
-    return getById(userId, ids[0]);
-  });
+  .then(ids => ids);
 };
 
 function update(userId, itemId, changes) {
