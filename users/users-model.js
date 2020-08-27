@@ -20,6 +20,6 @@ function findById(id) {
 };
 
 function add(user) {
-    return db("users").insert(user).then(ids => ids);
+    return db("users").insert(user);
 };
 
