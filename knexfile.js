@@ -1,4 +1,4 @@
-const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/auth";
+// const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/auth";
 
 module.exports = {
   development: {
@@ -16,7 +16,7 @@ module.exports = {
   },
   production: {
     client: "pg",
-    connection: pgConnection,
+    connection: process.env.DATABASE_URL
     pool: {
       mix: 2,
       max: 10
