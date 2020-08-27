@@ -9,10 +9,9 @@ router.post("/register", (req, res) => {
     const credentials = req.body;
 
     if (isValid(credentials)) {
+
         const rounds = process.env.BCRYPT_ROUNDS || 12;
-
         const hash = bcryptjs.hashSync(credentials.password, rounds);
-
         credentials.password = hash;
 
         Users.add(credentials)
@@ -31,12 +30,14 @@ router.post("/register", (req, res) => {
 });
 
 router.post("/login", (req, res) => {
+
     const { username, password } = req.body;
 
     if (isValid(req.body)) {
         Users.findBy({ username: username })
             .then(([user]) => {
                 if (user && bcryptjs.compareSync(password, user.password)) {
+                    
                     const token = signToken(user);
 
                     res.status(200).json({

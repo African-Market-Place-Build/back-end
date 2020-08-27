@@ -23,9 +23,7 @@ function getUserItems(userId){
 
 function insert(userId, item) {
   return db('items').insert({...item, user_id: userId})
-  .then(ids => {
-    return getById(userId, ids[0]);
-  });
+  .then(ids => ids[0]);
 };
 
 function update(userId, itemId, changes) {
