@@ -19,7 +19,6 @@ exports.up = function(knex) {
                 .increments()
                 .unique();
             table.foreign('user_id')
-                .integer()
                 .unsigned()
                 .notNullable()
                 .references("id")
