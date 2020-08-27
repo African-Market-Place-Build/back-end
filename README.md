@@ -55,7 +55,7 @@ Item Schema
 | Property      | Type 	  | Required or not                             |
 |:--------------|:--------|:--------------------------------------------|
 | id	        | Integer | assigned upon successful insert             |
-| user_id       | Integer | assigned upon successful insert the url     |
+| user_id       | Integer | assigned upon successful insert from the url|
 | name          | String  | required                                    |
 | category      | String  | required                                    |
 | description   | String  | required                                    |
