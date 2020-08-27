@@ -16,7 +16,7 @@ module.exports = {
   },
   production: {
     client: "pg",
-    connection: process.env.DATABASE_URL
+    connection: process.env.DATABASE_URL || "postgresql://postgres@localhost/auth",
     pool: {
       mix: 2,
       max: 10
