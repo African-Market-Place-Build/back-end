@@ -47,7 +47,7 @@ User example
     "username": "temtsel",
     "password": "password",
     "email": "temtsel@email.com",
-    "imageLink: "link"
+    "imageLink": "link"
 }
 
 Item Schema
@@ -70,7 +70,7 @@ Item example
 
 {
     "name": "iPad Pro 3rd Gen Wifi",
-    "category": "tablets"
+    "category": "tablets",
     "description": "used",
     "location": "Douala, Cameroon",
     "contactInfo": "hayden@gmail.com",
