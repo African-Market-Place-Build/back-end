@@ -16,9 +16,12 @@ function findBy(username) {
 };
 
 function findById(id) {
-    return db("users").where({id}).first();
+    return db("users").where({id});
 };
 
 function add(user) {
-    return db("users").insert(user).then(ids => ids[0]);
+    return db("users").insert(user).then(ids => {
+        return findById(ids[0]);
+    });
 };
+
